@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-priv
+  namespace: test
+spec:
+  containers:
+  - name: nginx-priv
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+    securityContext:
+      privileged: true
